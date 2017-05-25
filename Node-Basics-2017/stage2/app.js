@@ -22,14 +22,11 @@ function getProfile(username) {
       response.on('end', () => {
         // Parse the data
         const profile = JSON.parse(body);
-        printMessage(username, profile.badges.length, profile.points.JavaScript)
         // Print the data
+        printMessage(username, profile.badges.length, profile.points.JavaScript);
       });
-
-
   });
 }
 
 const users = process.argv.slice(2);
-
 users.forEach(getProfile);

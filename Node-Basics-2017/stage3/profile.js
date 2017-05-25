@@ -44,6 +44,7 @@ function get(username) {
 
     request.on('error', printError);
   } catch (error) {
+    // Malformed URL error
     printError(error);
   }
 }

@@ -5,7 +5,6 @@ function mergeValues(values, content) {
   for (let key in values) {
     // Replace all {{key}} with the value from the values object
     content = content.replace(`{{${key}}}`, values[key]);
-    console.log(values);
   }
   // return merged content
   return content;

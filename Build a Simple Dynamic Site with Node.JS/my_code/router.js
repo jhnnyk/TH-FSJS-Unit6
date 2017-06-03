@@ -49,7 +49,7 @@ function user(request, response) {
     // on "error"
     studentProfile.on("error", function(error) {
       // show error
-      renderer.view("error", {errorMessage: error.message}, response);
+      renderer.view("error", {values:{errorMessage: error.message}}, response);
       renderer.view("search", {}, response);
       renderer.view("footer", {}, response);
       response.end();
